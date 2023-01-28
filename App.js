@@ -1,17 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 export default function App() {
+  const handlePress = () => console.log("Text pressed");
   console.log("App executed");
-  
-  //let x; 
-  //x.toString();
 
   return (
-    <View style={styles.container}>
-      <Text>Hi Earth!</Text>
+    <SafeAreaView style={styles.container}>
+      <Text numberOfLines={1} onPress={handlePress}>
+        Hi Earth!!  React Native Tutorial for Beginners - Build a React Native App</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
